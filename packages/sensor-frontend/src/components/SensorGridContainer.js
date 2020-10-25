@@ -1,7 +1,7 @@
 import GridLayout from 'react-grid-layout';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => ({ metrics: state.sensorMetrics })
+const mapStateToProps = state => ({ metrics: state.sensorMetrics });
 
 export function SensorGridContainer(props) {
   return (
