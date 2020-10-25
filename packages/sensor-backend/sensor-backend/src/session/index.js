@@ -1,1 +1,0 @@
-export let SessionMap = new Map();
