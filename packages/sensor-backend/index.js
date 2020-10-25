@@ -13,7 +13,7 @@ import getDataForClient from './src/data-access/index.js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-app.use(express.static(path.join(__dirname, '../sensor-frontend/')));
+app.use(express.static(path.join(__dirname, '../sensor-frontend-old/')));
 
 const server = createServer(app);
 const wss = new WebSocket.Server({ server });

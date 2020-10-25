@@ -8,6 +8,11 @@ export default function getDataForClient(sessionId) {
     payload: {}
   };
 
+  if(!clientOptions) {
+    console.log(`clientOptions not available for sessionId ${sessionId}`);
+    return {};
+  }
+
   clientOptions.requestedMetricTypes.forEach(type => clientData.payload[type] = Math.random());
 
   return clientData;
