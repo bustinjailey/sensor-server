@@ -1,10 +1,11 @@
 import { receiveSensorMetrics } from '../reducers/sensorMetrics';
 import { reportConnectionState } from '../reducers/sensorConnectionMonitor';
+import MetricTypes from 'sensor-shared/constants/metricTypes';
 
 const ws = new WebSocket(`ws://localhost:8080`); // TODO: Parameterize
 
 let clientOptions = {
-  requestedMetricTypes: ['PUMP_1', 'PUMP_3', 'BLAH']
+  requestedMetricTypes: MetricTypes
 };
 
 export function registerWebsocketHandlers(store) {
